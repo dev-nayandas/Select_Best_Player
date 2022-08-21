@@ -8,8 +8,6 @@ function getInputFieldValueById(inputFieldId) {
 
 document.getElementById('calculationButton').addEventListener('click', function(){
   
-    // const costField = document.getElementById('perPlayerCost');
-    // const costString = costField.value;
     const costString = getInputFieldValueById('perPlayerCost');
     const costAmount = parseFloat(costString) * 5;
     const costTotalElement = document.getElementById('playerTotalCost');
@@ -21,16 +19,6 @@ document.getElementById('calculationButton').addEventListener('click', function(
 
 document.getElementById('finalCost').addEventListener('click', function() {
 
-    
-
-    // const costString = getInputFieldValueById('perPlayerCost');
-    // const costAmount = parseFloat(costString) * 5;
-    // console.log(costAmount);
-    // const costTotalElement = document.getElementById('playerTotalCost');
-    // const costTotalString = costTotalElement.innerText;
-    // const previousCostTotal = parseFloat(costTotalString);
-    // const currentCostTotal =  costAmount;
-    // costTotalElement.innerText = currentCostTotal;
     const playerCostString = document.getElementById('playerTotalCost').innerText;
     const playerCostAmount = parseFloat(playerCostString);
     const managerCost = getInputFieldValueById('managerCost');
