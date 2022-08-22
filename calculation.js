@@ -1,3 +1,21 @@
+const playerArray = [];
+
+function selectPlayer(player){
+//  console.log(player.parentNode.parentNode.children[1].innerText) ;   
+ const playerName = player.parentNode.parentNode.children[1].innerText;
+//  console.log(playerName) ;
+
+ const playerObj ={
+    playerName : playerName,
+ }
+
+ playerArray.push(playerObj);
+ console.log(playerArray.length) ;
+ document.getElementById('total-players').innerText = playerArray.length;
+}
+
+
+
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
     const inputFieldValueString = inputField.value;
@@ -9,7 +27,7 @@ function getInputFieldValueById(inputFieldId) {
 document.getElementById('calculationButton').addEventListener('click', function(){
   
     const costString = getInputFieldValueById('perPlayerCost');
-    const costAmount = parseFloat(costString) * 5;
+    const costAmount = parseFloat(costString) * playerArray.length;
     const costTotalElement = document.getElementById('playerTotalCost');
     const costTotalString = costTotalElement.innerText;
     const previousCostTotal = parseFloat(costTotalString);

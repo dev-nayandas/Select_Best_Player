@@ -20,72 +20,78 @@
                     <div class="col">
                       <div class="card h-100">
                         <img src="images/download (1).jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">Taskin</h5>
                         <div class="card-body">
-                          <h5 class="card-title">Taskin</h5>
+                         
                           <p class="card-text"> Best 150 Runs</p>
                         </div>
                         <div class="card-footer">
-                          <button class="btn btn-primary w-100">Select</button>
+                          <button class="btn btn-primary w-100" onclick="selectPlayer(this)">Select</button>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card h-100">
                         <img src="images/images.jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">Tamim</h5>
                         <div class="card-body">
-                          <h5 class="card-title">Tamim</h5>
+                          
                           <p class="card-text">Best 130 Runs</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary w-100">Select</button>
+                            <button class="btn btn-primary w-100" onclick="selectPlayer(this)">Select</button>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card h-100">
                         <img src="images/Imrul-Kayes-Ct17.png" class="card-img-top" alt="...">
+                        <h5 class="card-title">Imrul</h5>
                         <div class="card-body">
-                          <h5 class="card-title">Imrul</h5>
+                        
                           <p class="card-text">Best 110 Runs</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary w-100">Select</button>
+                            <button class="btn btn-primary w-100" onclick="selectPlayer(this)">Select</button>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card h-100">
                         <img src="images/ibu_otes_400x400.jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">Mahamudullah</h5>
                         <div class="card-body">
-                          <h5 class="card-title">Mahamudullah</h5>
+                         
                           <p class="card-text">Best 90 Runs</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary w-100">Select</button>
+                            <button class="btn btn-primary w-100" onclick="selectPlayer(this)">Select</button>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card h-100">
                         <img src="images/Mashrafe_Bin_Mortaza_(cropped).jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">Mashrafi</h5>
                         <div class="card-body">
-                          <h5 class="card-title">Mashrafi</h5>
+                          
                           <p class="card-text">Best 140 Runs</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary w-100">Select</button>
+                            <button class="btn btn-primary w-100" onclick="selectPlayer(this)">Select</button>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card h-100">
                         <img src="images/Sabbir_Rahman_2016_(cropped).jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">Summuya</h5>
                         <div class="card-body">
-                          <h5 class="card-title">Summuya</h5>
+                          
                           <p class="card-text">Best 180 Runs</p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary w-100">Select</button>
+                            <button class="btn btn-primary w-100" onclick="selectPlayer(this)">Select</button>
                         </div>
                       </div>
                     </div>
@@ -93,14 +99,19 @@
               </div>
               <div class="col-lg-4 bg-warning">
                 <div>
-                    <h2>Player Names</h2>
-                    <ol>
-                        <li>Taskin</li>
-                        <li>Tamim</li>
-                        <li>Imrul</li>
-                        <li>Mahamudullah</li>
-                        <li>Mashrafi</li>
-                    </ol>
+                    <h2>Total Players <span class="text-primary" id="total-players">0</span></h2>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Sl</th>
+                          <th scope="col">Name</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                      </tbody>
+                    </table>
                 </div>
                 <div>
                     <h2>Budget</h2>
@@ -120,6 +131,7 @@
     <footer style="height: 200px;" class="bg-dark text-white text-center justify-content-center">
         <small>All right reserved by Nayan Das</small>
     </footer>
+    <script src="select.js"></script>
     <script src="calculation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
