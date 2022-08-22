@@ -1,4 +1,22 @@
 const playerArray = [];
+function display(cartPlayer) {
+    // console.log(cartPlayer)
+    const tableBody = document.getElementById('table-body');
+    tableBody.innerHTML = "";
+    for(let i = 0; i < cartPlayer.length; i++) {
+        console.log(playerArray[i].playerName);
+        const name = playerArray[i].playerName;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+        <th scope="row">${i+1}</th>
+         <td>${name}</td>
+        `;
+        tableBody.appendChild(tr);
+    }
+    if(playerArray.length >=5 ) {
+        alert('Please select five player only');
+    }
+}
 
 function selectPlayer(player){
 //  console.log(player.parentNode.parentNode.children[1].innerText) ;   
@@ -10,8 +28,9 @@ function selectPlayer(player){
  }
 
  playerArray.push(playerObj);
- console.log(playerArray.length) ;
+//  console.log(playerArray.length) ;
  document.getElementById('total-players').innerText = playerArray.length;
+ display(playerArray)
 }
 
 
