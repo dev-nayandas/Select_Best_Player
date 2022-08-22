@@ -1,10 +1,9 @@
 const playerArray = [];
+
 function display(cartPlayer) {
-    // console.log(cartPlayer)
     const tableBody = document.getElementById('table-body');
     tableBody.innerHTML = "";
     for(let i = 0; i < cartPlayer.length; i++) {
-        console.log(playerArray[i].playerName);
         const name = playerArray[i].playerName;
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -13,22 +12,17 @@ function display(cartPlayer) {
         `;
         tableBody.appendChild(tr);
     }
-    if(playerArray.length >=5 ) {
+    if(playerArray.length >5 ) {
         alert('Please select five player only');
     }
 }
 
-function selectPlayer(player){
-//  console.log(player.parentNode.parentNode.children[1].innerText) ;   
+function selectPlayer(player){ 
  const playerName = player.parentNode.parentNode.children[1].innerText;
-//  console.log(playerName) ;
-
  const playerObj ={
     playerName : playerName,
  }
-
  playerArray.push(playerObj);
-//  console.log(playerArray.length) ;
  document.getElementById('total-players').innerText = playerArray.length;
  display(playerArray)
 }
@@ -65,6 +59,7 @@ document.getElementById('finalCost').addEventListener('click', function() {
     const previousCostFinal = parseFloat(costFinalString);
     const currentCostFinal =  managerCost + coachCost + playerCostAmount;
     finalCostElement.innerText = currentCostFinal;
-    console.log(currentCostFinal)
+    // console.log(currentCostFinal)
    
 })
+
